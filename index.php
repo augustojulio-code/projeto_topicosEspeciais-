@@ -1,9 +1,21 @@
 <?php
 
-$paginas = ['home' => 'Pagina Home', 'sobre' => 'Pagina Sobre', 'contato' => ''];
+$paginas = ['Cadastro Produto' => '', 'sobre' => 'Pagina Sobre', 'contato' => ''];
 
 
 $paginas['contato'] = '<form> <input type = "text" placeholder ="Nome" /> <button onclick ="imbecil()">clique aqui imbecil</button></form>';
+
+$paginas['Cadastro Produto'] = '<br>
+<form method="post" action="VerificaCadastro.php">
+    <pre>
+        Nome      : <input type="text" name="txtprod_nome"><br>
+        Descrição : <textarea type="text" name="txtprod_desc"></textarea><br>
+        preço     : <input type="text" name="txtprod_preco"><br>
+        Quantidade: <input type="text" name="txtprod_qtd"><br>
+        
+        <input type="submit" value="Cadastrar" name="btn" onclick ="imbecil()"><br>
+    </pre>
+</form>';
 ?>
 
 <!DOCTYPE html>
@@ -66,11 +78,11 @@ function imbecil() {
     <section>
         <h2>
             <?php
-            $pagina = (isset($_GET['page']) ? $_GET['page'] : 'home');
+            $pagina = (isset($_GET['page']) ? $_GET['page'] : 'Cadastro Produto');
 
             if (!array_key_exists($pagina, $paginas)) {
 
-                $pagina = 'home';
+                $pagina = 'Cadastro Produto';
             }
             echo ucfirst($pagina);
 
