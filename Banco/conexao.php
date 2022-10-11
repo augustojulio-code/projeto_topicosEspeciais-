@@ -1,3 +1,3 @@
 <?php
 
-    $conexao = mysqli_connect('localhost','root','','bd_produto');
+$conexao = mysqli_connect('localhost', 'root', 'root', 'produtos');

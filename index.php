@@ -1,19 +1,20 @@
 <?php
 
+
 $paginas = ['Cadastro Produto' => '', 'sobre' => 'Pagina Sobre', 'contato' => ''];
 
 
 $paginas['contato'] = '<form> <input type = "text" placeholder ="Nome" /> <button onclick ="imbecil()">clique aqui imbecil</button></form>';
 
 $paginas['Cadastro Produto'] = '<br>
-<form method="post" action="VerificaCadastro.php">
+<form method="post" action="Banco.dao/verificaCadastro.php">
     <pre>
         Nome      : <input type="text" name="txtprod_nome"><br>
         Descrição : <textarea type="text" name="txtprod_desc"></textarea><br>
         preço     : <input type="text" name="txtprod_preco"><br>
         Quantidade: <input type="text" name="txtprod_qtd"><br>
         
-        <input type="submit" value="Cadastrar" name="btn" onclick ="imbecil()"><br>
+        <input type="submit" value="Cadastrar" name="btn"><br>
     </pre>
 </form>';
 ?>
